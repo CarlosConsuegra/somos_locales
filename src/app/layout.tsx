@@ -13,7 +13,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className="min-h-screen">{children}</body>
+      <head>
+        {/* Fallback Tailwind CSS from CDN */}
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+      </head>
+      <body>{children}</body>
     </html>
   )
 }
